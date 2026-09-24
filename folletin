@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Folleto - Laboratorio Interactivo</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
+  body { background: linear-gradient(135deg, #eef2f3 0%, #8e9eab 100%); padding: 30px 15px; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+  
+  .folleto-container { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px; 
+    max-width: 1100px; 
+    width: 100%; 
+  }
+
+  .card { 
+    background: #ffffff; 
+    border-radius: 16px; 
+    padding: 25px; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08); 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 6px solid #4f46e5;
+  }
+
+  .card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.12); }
+
+  .card:nth-child(2) { border-top-color: #06b6d4; }
+  .card:nth-child(3) { border-top-color: #10b981; }
+
+  .badge {
+    align-self: flex-start;
+    background: #e0e7ff;
+    color: #4f46e5;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  h1 { font-size: 20px; color: #1e293b; margin-bottom: 5px; font-weight: 700; }
+  .subtitle { font-size: 12px; color: #64748b; margin-bottom: 15px; }
+
+  h2 { font-size: 14px; color: #334155; margin: 15px 0 8px 0; font-weight: 600; display: flex; align-items: center; gap: 6px; }
+
+  p, li { font-size: 12px; color: #475569; line-height: 1.6; }
+  ul { padding-left: 18px; margin-bottom: 10px; }
+  li { margin-bottom: 6px; }
+
+  .highlight-box {
+    background: #f8fafc;
+    border-left: 4px solid #4f46e5;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 10px;
+    font-size: 11px;
+  }
+
+  .web-link {
+    margin-top: 15px;
+    background: #4f46e5;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    display: block;
+  }
+
+  .footer-tag { font-size: 10px; color: #94a3b8; text-align: center; margin-top: 15px; border-top: 1px solid #f1f5f9; padding-top: 8px; }
+</style>
+</head>
+<body>
+
+<div class="folleto-container">
+  
+  <!-- TARJETA 1 -->
+  <div class="card">
+    <div>
+      <span class="badge">Sección A</span>
+      <h1>Laboratorio Interactivo</h1>
+      <p class="subtitle">Variación y Cambio • Nivel Universitario</p>
+      
+      <h2>📌 Contextualización</h2>
+      <p><b>Asignatura:</b> Laboratorio de Matemáticas II</p>
+      <p><b>Propósito:</b> Comprender analítica e intuitivamente el comportamiento de magnitudes correlacionadas mediante simulación en tiempo real.</p>
+      
+      <h2>🎯 Resultados de Aprendizaje</h2>
+      <ul>
+        <li>Modelar matemáticamente situaciones de cambio entre variables en contexto.</li>
+        <li>Calcular tasas de cambio instantáneas usando representaciones gráficas y algebraicas.</li>
+      </ul>
+    </div>
+    <div class="footer-tag">Guía de Práctica • Módulo 1</div>
+  </div>
+
+  <!-- TARJETA 2 -->
+  <div class="card">
+    <div>
+      <span class="badge" style="background: #cff4fc; color: #087990;">Sección B</span>
+      <h1>Orientación y Reglas</h1>
+      <p class="subtitle">Dinámica de Trabajo e Interacción</p>
+      
+      <h2>⚡ Reglas de Funcionamiento</h2>
+      <ul>
+        <li><b>Preguntas abiertas:</b> El público puede intervenir en cualquier momento de la explicación teórica.</li>
+        <li><b>Participación dirigida:</b> Los expositores elegirán participantes para responder dudas clave.</li>
+        <li><b>Validación:</b> Ninguna respuesta se considera válida sin su justificación matemática explícita.</li>
+      </ul>
+
+      <div class="highlight-box">
+        💡 <b>Materiales:</b> Dispositivo móvil o laptop con navegador web actualizado y cuaderno de apuntes.
+      </div>
+    </div>
+    <div class="footer-tag">Guía de Práctica • Módulo 2</div>
+  </div>
+
+  <!-- TARJETA 3 -->
+  <div class="card">
+    <div>
+      <span class="badge" style="background: #d1fae5; color: #065f46;">Sección C</span>
+      <h1>Argumentación y Cierre</h1>
+      <p class="subtitle">Desarrollo y Retroalimentación</p>
+      
+      <h2>🗣️ Momentos Obligatorios</h2>
+      <ul>
+        <li>Explicar procedimientos paso a paso.</li>
+        <li>Justificar respuestas numéricas e identificar errores.</li>
+        <li>Defender conclusiones finales ante el grupo.</li>
+      </ul>
+
+      <h2>🔄 Retroalimentación Web</h2>
+      <p>La plataforma interactiva ofrece pistas automáticas e inmediatas cuando detecta un error en los cálculos o gráficos.</p>
+      
+      <a href="https://variaci-n-y-cambio-laboratorio-interactivo.ai.studio" class="web-link" target="_blank">🌐 Acceder al Laboratorio Web</a>
+    </div>
+    <div class="footer-tag">Guía de Práctica • Módulo 3</div>
+  </div>
+
+</div>
+
+</body>
+</html>
